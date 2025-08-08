@@ -95,29 +95,6 @@ The project includes:
 
 ---
 
-## 🚀 How to Run
-
-1. Clone this repository:
-
-```bash
-git clone https://github.com/yourusername/NewYorkAirbnbEDA.git
-cd NewYorkAirbnbEDA
-```
-
-2. Install dependencies:
-
-```bash
-pip install pandas numpy matplotlib seaborn
-```
-
-3. Run the Jupyter Notebook or Google Colab file:
-
-```bash
-jupyter notebook New_York_Airbnb_EDA_Project.ipynb
-```
-
----
-
 ## 📌 Requirements
 
 * Python 3.7+
