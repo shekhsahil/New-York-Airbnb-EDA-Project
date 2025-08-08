@@ -1,5 +1,7 @@
 
 #  New York Airbnb EDA Project
+<img width="1024" height="1024" alt="image" src="https://github.com/user-attachments/assets/c92400ad-7d88-4f7f-a725-e301d83696e7" />
+
 
 This project focuses on **Exploratory Data Analysis (EDA)** of New York City Airbnb listings.
 It covers data loading, cleaning, visualization, and feature engineering to identify trends and patterns in pricing, availability, and other attributes.
