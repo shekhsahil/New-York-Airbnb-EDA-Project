@@ -1,105 +1,96 @@
 
 # 🏙 New York Airbnb EDA Project
 
-This project performs **Exploratory Data Analysis (EDA)** on a dataset of Airbnb listings in New York City.
-The analysis includes **data cleaning, visualization, and feature engineering** to uncover patterns in pricing, availability, and listing attributes across different boroughs and room types.
+This project focuses on **Exploratory Data Analysis (EDA)** of New York City Airbnb listings.
+It covers data loading, cleaning, visualization, and feature engineering to identify trends and patterns in pricing, availability, and other attributes.
 
 ---
 
 ## 📂 Project Overview
 
-The primary goals of this project are:
+The aim of this project is to:
 
 * Load and explore the Airbnb dataset.
-* Clean and preprocess the data by handling missing values, duplicates, and data types.
-* Analyze the distribution of key features such as price, availability, and reviews.
-* Explore relationships between variables using univariate, bivariate, and geographical visualizations.
-* Engineer new features for deeper insights.
+* Clean and preprocess data by handling missing values, duplicates, and incorrect data types.
+* Perform statistical analysis and create visualizations.
+* Derive insights about pricing, availability, reviews, and location-based trends.
 
 ---
 
 ## 📊 Dataset
 
-**Source:** `airbnb_dataset.csv` (sample data from Airbnb NYC listings)
-**Size:** 20,724 rows × 22 columns
+* **File Name:** `airbnb_dataset.csv`
+* **Entries:** 20,724 rows × 22 columns
+* **Key Columns:**
 
-**Key Columns:**
-
-* `neighbourhood_group` – NYC boroughs (Manhattan, Brooklyn, Queens, Bronx, Staten Island)
-* `room_type` – Type of listing (Entire home/apartment, Private room, etc.)
-* `price` – Listing price per night (USD)
-* `minimum_nights` – Minimum stay requirement
-* `number_of_reviews` – Number of guest reviews
-* `availability_365` – Availability throughout the year
-* `latitude` & `longitude` – Geographical coordinates
+  * `neighbourhood_group` – Borough in NYC (Manhattan, Brooklyn, Queens, Bronx, Staten Island)
+  * `room_type` – Type of listing (Entire home/apartment, Private room, etc.)
+  * `price` – Price per night in USD
+  * `minimum_nights` – Minimum nights required to book
+  * `number_of_reviews` – Number of guest reviews received
+  * `reviews_per_month` – Average reviews per month
+  * `availability_365` – Availability days in a year
+  * `latitude`, `longitude` – Geographic coordinates
 
 ---
 
-## 🔧 Steps & Methods
+## 🔧 Steps in the Project
 
-### 1. **Importing Dependencies**
+### 1. Importing Dependencies
 
-Libraries used:
+* Libraries used: `pandas`, `numpy`, `matplotlib`, `seaborn`
 
-```python
-pandas, numpy, matplotlib, seaborn
-```
+### 2. Data Cleaning
 
-### 2. **Data Cleaning**
+* Removed rows with missing values.
+* Dropped duplicate records.
+* Converted data types for appropriate columns.
+* Removed price outliers (listings priced above \$1500).
 
-* Removed rows with null values.
-* Dropped duplicate entries.
-* Converted columns to correct data types.
-* Removed extreme outliers (prices above \$1500).
-
-### 3. **Exploratory Data Analysis (EDA)**
+### 3. Exploratory Data Analysis
 
 **Univariate Analysis**
 
-* Distribution plots for `price` and `availability_365`.
-* Average price per neighbourhood group.
+* Distribution of `price` and `availability_365`
+* Average price per neighbourhood group
 
 **Feature Engineering**
 
-* Added `price_per_bed` column to normalize price by number of beds.
+* Created `price_per_bed` column to better compare listings with different bed counts
 
 **Bivariate Analysis**
 
-* Price comparison across neighbourhood groups and room types.
-* Relationship between price and number of reviews.
-* Pairplots of numerical features segmented by room type.
+* Barplots comparing prices across neighbourhoods and room types
+* Scatterplots of price vs number of reviews
+* Pairplots of numerical features segmented by room type
 
 **Geospatial Analysis**
 
-* Scatterplot of listings based on latitude & longitude with room type color coding.
+* Scatterplot mapping listings using latitude & longitude
+
+**Correlation Analysis**
+
+* Heatmap to identify relationships between numerical variables
 
 ---
 
 ## 📈 Key Insights
 
-* **Manhattan** has the highest average listing prices, followed by Brooklyn.
-* **Price per bed** is significantly higher in Manhattan than other boroughs.
+* Manhattan has the highest average listing prices, followed by Brooklyn.
+* Price per bed is significantly higher in Manhattan than other boroughs.
 * Most listings are concentrated in Manhattan and Brooklyn.
 * Entire home/apartment listings are more expensive compared to shared or private rooms.
+* Number of reviews and reviews per month have a **strong positive correlation (0.63)** — listings with more total reviews tend to receive them more frequently.
+* Price and beds show a **moderate correlation (0.42)** — listings with more beds tend to be priced higher.
+* Longitude and price have a **weak negative correlation (-0.19)** — slight east–west effects on pricing.
+* Most other numerical features show **very low correlations**, indicating minimal linear relationships.
 
 ---
 
-## 📷 Visualizations
+## 📷 Visualizations Included
 
-The project includes:
-
-* **Boxplots & Histograms** – Price distribution & availability patterns.
-* **Barplots** – Average price per neighbourhood and room type.
-* **Scatterplots** – Price vs. reviews & geographical mapping.
-* **Pairplots** – Multi-variable relationships.
-
----
-
-## 📌 Requirements
-
-* Python 3.7+
-* Pandas, NumPy, Matplotlib, Seaborn
-* Jupyter Notebook / Google Colab
-
-I can also make you a **short, recruiter-friendly GitHub description** for this project so it looks professional when someone visits your repo.
-Do you want me to prepare that next?
+* Boxplots and histograms of price and availability distributions
+* Barplots of prices by neighbourhood and room type
+* Scatterplots of price vs number of reviews and geospatial location mapping
+* Pairplots of multiple features segmented by room type
+* Correlation heatmap of numerical features
