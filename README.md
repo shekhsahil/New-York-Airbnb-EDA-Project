@@ -23,7 +23,7 @@ The aim of this project is to:
 * **Entries:** 20,724 rows × 22 columns
 * **Key Columns:**
 
-  * `neighbourhood_group` – Borough in NYC (Manhattan, Brooklyn, Queens, Bronx, Staten Island)
+  * `neighbourhood_group` –In NYC (Manhattan, Brooklyn, Queens, Bronx, Staten Island)
   * `room_type` – Type of listing (Entire home/apartment, Private room, etc.)
   * `price` – Price per night in USD
   * `minimum_nights` – Minimum nights required to book
